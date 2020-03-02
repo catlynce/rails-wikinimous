@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 20.times do
-    Article.create title: Faker::Lorem.sentence, content: Faker::Lorem.paragraphs
+    Article.create title: Faker::Lorem.sentence, content: Faker::Lorem.paragraphs(number: rand(2..8)).join('\n')
 end
 puts "Seed finished"
